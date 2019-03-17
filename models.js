@@ -53,7 +53,7 @@ const BlogPosts = {
       );
     }
     this.posts[postIndex] = Object.assign(this.posts[postIndex], updatedPost);
-    return this.posts[postIndex];
+        return (this.posts[postIndex]);
   }
 };
 

@@ -74,19 +74,19 @@ router.put("/:id", (req, res) => {
   if (req.params.id !== req.body.id) {
     const message = `Request path id (${
       req.params.id
-    }) and request body id ``(${req.body.id}) must match`;
+    }) and request body id (${req.body.id}) must match`;
     console.error(message);
     return res.status(400).send(message);
   }
   console.log(`Updating blog post with id \`${req.params.id}\``);
-  BlogPosts.update({
+  const updatedItem = BlogPosts.update({
     id: req.params.id,
     title: req.body.title,
     content: req.body.content,
     author: req.body.author,
     publishDate: req.body.publishDate
   });
-  res.status(204).end();
+  res.status(200).json(updatedItem);
 });
 
 // add endpoint for DELETE requests. These requests should
@@ -94,8 +94,9 @@ router.put("/:id", (req, res) => {
 // `BlogPosts.delete()`
 
 router.delete("/:id", (req, res) => {
+  console.log("router delete ", req.params.id);
   BlogPosts.delete(req.params.id);
-  console.log(`Deleted blog post with id \`${req.params.ID}\``);
+  console.log(`Deleted blog post with id \`${req.params.id}\``);
   res.status(204).end();
 });
 
