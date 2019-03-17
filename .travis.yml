@@ -1,3 +1,9 @@
-# travis
 language: node_js
 node_js: node
+deploy:
+  provider: heroku
+  api_key:
+    secure: qKcgcPSGcBCpDKRHCU3sfjzFKJkaZHFJMRjs7ewxkFvXFYX0AphFcuPAX6j7xe+ZcoQUpHIeIZIT38pe7IxQKT79Jigoq4YuT/TVMSWSz/uANuRrobp1Sm119Qe0ANpBsKzudmpUey3MVe0m1nbJ7SnlOqNOi87ngF3RlxvPsVGfpXhj8dxVLqqsLPsfXJ+79ngYh76AgIjxrerjYsUooGnetSkBvAPgpZhgVj+WYDfMsbXypBspNTw4wYrfdJDtvmkbc8kbb/eQwqVgOI1Y9CZhoBObbfMFdVuoBKs2+RvGvTlbuaP06CHpqNa+Tlo9EvzfsQDaautiqcdsy7RJmFb72hOR/qtZqnB8l/KA0xY8UHA6rlTNpLpsV1KYprjYHR67tpbLW+fIWOVDCTuvHEdVkt81qWKGMGK29wbgT+pKaAL92zEXwVWKu1dnUXgL08/Jz1QbKPn5jngNte+L3la75YGft1EzGrdycxrGKc1WwsvlI49p3038yc/t6PYPOZCYzzMn6cBc3PJ54UJNuO0htbNQmztl1ro6t/lpMhXI8VEwvl5g2PRiDMTCfl9p2c086oN5mCvPwihTxGqXZmrwpMuFl+v+t49zORa4qDzSjktfqva2vnCSmichs1aAd+pZRoIuESmcKMcElBzP5rU94Uao/Uzq8S/oC5mLCfA=
+  app: shielded-ravine-18638
+  on:
+    repo: ElenaG518/blog-app-challenge-starter-files
